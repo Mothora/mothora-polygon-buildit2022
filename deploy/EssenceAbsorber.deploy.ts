@@ -8,21 +8,20 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await getNamedAccounts();
 
   // crazy settings:  300000, 10
+  // normal setting: 15, 600
   await deploy('EssenceAbsorber', {
     from: deployer,
     log: true,
-    args: [(await deployments.get('MothoraGame')).address, 15, 600],
+    args: [(await deployments.get('MothoraGame')).address, 300000, 10],
   });
-  if ((await read('MothoraGame', 'getEssenceAbsorber')) === ethers.constants.AddressZero) {
-    await execute(
-      'MothoraGame',
-      { from: deployer, log: true },
-      'setEssenceAbsorber',
-      (
-        await deployments.get('EssenceAbsorber')
-      ).address
-    );
-  }
+  await execute(
+    'MothoraGame',
+    { from: deployer, log: true },
+    'setEssenceAbsorber',
+    (
+      await deployments.get('EssenceAbsorber')
+    ).address
+  );
 };
 export default func;
 func.tags = ['EssenceAbsorber', 'Main', 'Test'];

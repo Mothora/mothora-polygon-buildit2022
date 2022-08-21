@@ -55,7 +55,7 @@ Mothora follows a model that incentivizes honing skills in battle and the employ
 - **Artifacts.sol**: https://mumbai.polygonscan.com/address/0xc48CDc6711aa068A90CcEBf5274E45255c37052A
 - **Cosmetics.sol**: https://mumbai.polygonscan.com/address/0x20d7e5D10B16b3fcA8Ea2EE93bb704C8B5894Ad5
 - **Essence.sol**: https://mumbai.polygonscan.com/address/0x4D3C09A1BbC80724ca412A2bc13f751E475dB245
-- **EssenceAbsorber.sol**: https://mumbai.polygonscan.com/address/0x7270B463532B7f8F0148768A1FBf727a27cE1Ae3
+- **EssenceAbsorber.sol**: https://mumbai.polygonscan.com/address/0x7F8b7F2c46D23AE6654f855821c22B2f74a94309
 
 ### Average test coverage - All files
 
