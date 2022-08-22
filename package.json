@@ -7,7 +7,9 @@
     "test": "hardhat compile && hardhat test ./test/*.test.ts",
     "node:hardhatevm": "hardhat node",
     "compile": "hardhat compile",
-    "coverage": "hardhat coverage --testfiles 'test/*.test.ts'"
+    "coverage": "hardhat coverage --testfiles 'test/*.test.ts'",
+    "airdrop": "hardhat run --network mumbai scripts/airdrop.ts",
+    "rewards": "hardhat run --network mumbai scripts/distributeRewards.ts"
   },
   "keywords": [
     "hardhat",
