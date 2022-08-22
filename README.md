@@ -23,6 +23,7 @@ The world of Mothora is governed by the $ESSENCE, a natural occurrence that play
 The end goal of a game’s season is for each of the three Factions to make their $ESSENCE Absorber staking system the most efficient. In each play season, the factions compete for a finite amount of rewards allotted to each, with a variety of strategies and social coordination being required for players in each faction to make the most out of those rewards. By selectively incentivising these actions, it is possible to boost the social component of the game, the degree of interdependence of players, and the sense of belonging to a real evolving community.
 
 In a nutshell, in Mothora players will succeed by:
+
 - Thinking ahead and coordinating
 - Cooperating with battle companions and guild members
 - Understanding well the intricacies of the combat mechanics
@@ -42,8 +43,8 @@ Players will then be able to spend $ESSENCE in a variety of in-game actions and 
 
 - MothoraGame.sol: Acts as the main contract with account definition and a registry of all the other contracts. Allows players to enter a faction and defect to other factions
 - modules/Arena.sol: Manages the start of a battle between players and its termination, rewarding users with a random number of Artifact NFTs that can be used to increase the eficiency of the Faction $ESSENCE Absorber
-- modules/Artifacts.sol: Manages the mint of new artifacts as they are given out in rewards or potentially through crafting (not implemented)
-- modules/Cosmetics.sol: Manages the mint of new cosmetic skins, such as character skins. Currently only one demonstration skin exists per faction.
+- modules/Artifacts.sol: Manages the mint of new artifacts as they are given out in rewards or potentially through crafting (not implemented). Contains a hardcoded base16 CID link for the Artifacts metadata, generated with Pinata IPFS utility (https://www.pinata.cloud/). Check `/helpers`folder to browse the functions used.
+- modules/Cosmetics.sol: Manages the mint of new cosmetic skins, such as character skins. Currently only one demonstration skin exists per faction. Contains a hardcoded base16 CID link for the Faction Skins metadata, generated with Pinata IPFS utility (https://www.pinata.cloud/). Check `/helpers`folder to browse the functions used.
 - modules/Essence.sol: The main currency in the game. For demonstration purposes it is minted in its entirety to the deployer address and airdropped to players.
 - modules/EssenceAbsorber: Users can stake both $ESSENCE and Artifacts in their absorbing system. Ultimately this is what the competition is about, to increase the Absorber efficiency for their own faction. Users can also unstake, calculate and claim rewards. The reward distribution system is push-based, performed by an admin function. We admit this to be a flaw of the system that would be upgraded into a pull-based mechanism where each user "distributes" to himself/herself the rewards.
 
@@ -54,6 +55,8 @@ Players will then be able to spend $ESSENCE in a variety of in-game actions and 
 5. **Unreal Engine multiplayer** - Allows for multiple characters on the same server in real-time
 
 6. **Unreal Engine <-> Web 3 Integration** - Customized the connection between the Smart contracts and the Unreal Engine Environment that allows the player to trigger blockchain transactions from within the game window and sign them using walletconnect.
+
+7. **Pinata.cloud typescript Wrappers** - Used to pin the NFTs metadata onto IPFS and give back a base16 CID link to display the metadata.
 
 <br>
 
